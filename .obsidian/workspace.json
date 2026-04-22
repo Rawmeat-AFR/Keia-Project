@@ -1,0 +1,248 @@
+{
+  "main": {
+    "id": "20628bcdb576d988",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1d1f72e17d15324",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c0197ef8ffe8c6c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "魔導/無題のファイル.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "無題のファイル"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b0346b3d969211dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "b88292624b65788d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33c45f0a50cc75cd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "a100c9a1924bafa5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#世界観",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "ae7ad9c89eeebd79",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 297.5
+  },
+  "right": {
+    "id": "437654be7e7319d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "7553794ca0669d77",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8225d40fd2f5cfc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "国家/アルジア連邦帝國/統治/行政/帝國行政府.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "帝國行政府へのバックリンク"
+            }
+          },
+          {
+            "id": "cc34718f2c302e05",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "template/アルジア用テンプレート.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "アルジア用テンプレートからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "cf9984eff5380985",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "ac3be2add960906f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "3c8cec8e3d3aaebb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "作成指示.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "作成指示のアウトライン"
+            }
+          },
+          {
+            "id": "221482d956e33ec4",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "template/アルジア_template/100-001-.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 275.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新規ベースを作成": false,
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "markdown-importer:Markdownインポーターを開く": false,
+      "workspaces:ワークスペースレイアウトを管理": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-importer:Open Importer": false,
+      "templater-obsidian:Templater": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "c0197ef8ffe8c6c3",
+  "lastOpenFiles": [
+    "魔導/無題のファイル.md",
+    "国家/アルジア連邦帝國/統治ベース.base",
+    "国家/アルジア連邦帝國/軍事ベース.base",
+    "国家/アルジア連邦帝國/統治/公共/治安/帝國警察機構に関する概要.md",
+    "国家/アルジア連邦帝國/統治/行政/行政区分及び地方政府.md",
+    "国家/アルジア連邦帝國/軍事/総合/統合幕僚本部.md",
+    "国家/アルジア連邦帝國/統治/行政/人口及び惑星の統計.md",
+    "国家/アルジア連邦帝國/統治/政治/帝國保護領の詳細.md",
+    "国家/アルジア連邦帝國/統治/公共/インフラ/コロニー等の宙間総合拠点について.md",
+    "国家/アルジア連邦帝國/軍事/総合/士官等に関する規定.md",
+    "国家/アルジア連邦帝國/軍事/宙間/宙軍指揮系統.md",
+    "国家/アルジア連邦帝國/軍事/宙間/宙軍階級表.md",
+    "国家/アルジア連邦帝國/軍事/宙間/艦種.md",
+    "国家/アルジア連邦帝國/軍事/陸上/陸軍階級.md",
+    "国家/アルジア連邦帝國/軍事/陸上/陸軍指揮系統.md",
+    "template/テンプレート.md",
+    "国家/アルジア連邦帝國/軍事/総合/軍憲省及び監察機関.md",
+    "国家/アルジア連邦帝國/統治/地理/蒼球の地理及び天体運動報告書.md",
+    "国家/アルジア連邦帝國/統治/行政/帝國行政府.md",
+    "国家/アルジア連邦帝國/統治/経済/法定通貨に関するシステム.md",
+    "国家/アルジア連邦帝國/統治/経済/企業及び上場に関する規定.md",
+    "国家/オーレン帝国/統治ベース.base",
+    "国家/オーレン帝国/軍事ベース.base",
+    "国家/国家テンプレート/統治/行政/行政府内参与機関.md",
+    "国家/国家テンプレート/統治/経済/法定通貨に関するシステム.md",
+    "国家/国家テンプレート/統治/公共/インフラ/コロニー等の宙間総合拠点について.md",
+    "国家/国家テンプレート/軍事/総合/士官等に関する規定.md",
+    "国家/国家テンプレート/軍事/陸上/陸軍階級.md",
+    "国家/国家テンプレート/軍事/陸上/陸軍指揮系統.md",
+    "国家/国家テンプレート/軍事/陸上/自立型機械歩兵.md",
+    "国家/オーレン帝国/統治/公共/社会保障",
+    "国家/オーレン帝国/統治/公共/治安",
+    "国家/オーレン帝国/統治/公共/インフラ",
+    "国家/オーレン帝国/軍事/総合",
+    "国家/オーレン帝国/軍事/陸上",
+    "国家/国家テンプレート/軍事/旧軍事部門資料",
+    "国家/アルジア連邦帝國/統治/無題のファイル.canvas",
+    "帝國軍指揮系統.svg",
+    "紫鴉世界/帝國旗(アルジア).png"
+  ]
+}

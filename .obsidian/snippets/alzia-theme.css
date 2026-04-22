@@ -1,0 +1,461 @@
+/* ============================================================
+   Algia Theme — Obsidian CSS Snippet
+   シンプル・モダン ダークテーマ
+   ・フォルダごとに色分け
+   ・サイドバー視認性強化
+   ・MD本文の可読性 + 太字がつぶれない設計
+   ============================================================
+   導入方法:
+   1. このファイルを <vault>/.obsidian/snippets/ に置く
+   2. 設定 > 外観 > CSSスニペット でオンにする
+   ============================================================ */
+
+/* ──────────────────────────────────────
+   1. グローバル変数
+────────────────────────────────────── */
+.theme-dark {
+    /* ベース背景 */
+    --color-base-00: #181c26;
+    --color-base-05: #1c2030;
+    --color-base-10: #212638;
+    --color-base-20: #262c42;
+    --color-base-25: #232838;
+    --color-base-30: #2a3040;
+    --color-base-35: #313848;
+    --color-base-40: #3c4558;
+    --color-base-50: #525e78;
+    --color-base-60: #6b7897;
+    --color-base-70: #8d9ab5;
+    --color-base-100: #dde3f0;
+    /* アクセントカラー */
+    --color-accent: #5b8cff;
+    --color-accent-hover: #7aa3ff;
+    /* テキスト */
+    --text-normal: #d8dff0;
+    --text-muted: #7a87a3;
+    --text-faint: #4a5570;
+    /* インタラクティブ */
+    --background-primary: var(--color-base-00);
+    --background-primary-alt: var(--color-base-05);
+    --background-secondary: var(--color-base-10);
+    --background-secondary-alt: var(--color-base-20);
+    --background-modifier-hover: rgba(91, 140, 255, 0.08);
+    --background-modifier-active-hover: rgba(91, 140, 255, 0.14);
+    --background-modifier-border: rgba(255,255,255,0.06);
+    /* フォルダカラー定義 */
+    --folder-color-kokusai: #4fc3f7; /* 国際  — スカイブルー */
+    --folder-color-gijutsu: #81c995; /* 技術  — ミントグリーン */
+    --folder-color-kokka: #ce93d8; /* 国家  — ラベンダー */
+    --folder-color-touchi: #ffb74d; /* 統治  — アンバー */
+    --folder-color-gunji: #ef9a9a; /* 軍事  — ローズ */
+    --folder-color-kiroku: #80cbc4; /* 記録  — ティール */
+    --folder-color-template: #546e7a; /* テンプレート — グレーブルー */
+    --folder-color-archive: #4a5168; /* archive — ダルグレー */
+    /* フォント */
+    --font-text-theme: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+    --font-monospace-theme: "JetBrains Mono", "Fira Code", monospace;
+    --font-interface-theme: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    --font-text-size: 15px;
+    --line-height-normal: 1.85;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+/* ──────────────────────────────────────
+   2. サイドバー全体
+────────────────────────────────────── */
+.nav-folder-title,
+.nav-file-title {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    border-radius: 5px;
+    transition: background 0.15s ease, color 0.15s ease;
+    padding: 2px 8px 2px 6px;
+}
+
+    .nav-folder-title:hover,
+    .nav-file-title:hover {
+        background: var(--background-modifier-hover);
+    }
+
+    .nav-file-title.is-active {
+        background: rgba(91, 140, 255, 0.16);
+        color: var(--color-accent-hover);
+        font-weight: 500;
+    }
+
+.nav-folder-collapse-indicator {
+    color: var(--text-faint);
+    opacity: 0.7;
+}
+
+/* ──────────────────────────────────────
+   3. フォルダごとの色分け
+────────────────────────────────────── */
+
+/* 国際 */
+.nav-folder-title[data-path*="国際"] {
+    color: var(--folder-color-kokusai) !important;
+}
+
+    .nav-folder-title[data-path*="国際"]::before {
+        content: "🌐 ";
+        font-size: 11px;
+    }
+
+/* 技術 */
+.nav-folder-title[data-path*="技術"] {
+    color: var(--folder-color-gijutsu) !important;
+}
+
+    .nav-folder-title[data-path*="技術"]::before {
+        content: "⚙️ ";
+        font-size: 11px;
+    }
+
+/* 国家（ルート） */
+.nav-folder-title[data-path="国家"],
+.nav-folder-title[data-path*="/国家"] {
+    color: var(--folder-color-kokka) !important;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+/* 統治系 */
+.nav-folder-title[data-path*="統治"] {
+    color: var(--folder-color-touchi) !important;
+}
+
+.nav-folder-title[data-path*="政治"],
+.nav-folder-title[data-path*="行政"],
+.nav-folder-title[data-path*="法制度"],
+.nav-folder-title[data-path*="経済"],
+.nav-folder-title[data-path*="地理"],
+.nav-folder-title[data-path*="公共"],
+.nav-folder-title[data-path*="治安"],
+.nav-folder-title[data-path*="インフラ"],
+.nav-folder-title[data-path*="社会保障"] {
+    color: color-mix(in srgb, var(--folder-color-touchi) 80%, white) !important;
+    font-size: 12.5px;
+}
+
+/* 軍事系 */
+.nav-folder-title[data-path*="軍事"] {
+    color: var(--folder-color-gunji) !important;
+}
+
+.nav-folder-title[data-path*="総合"],
+.nav-folder-title[data-path*="陸上"],
+.nav-folder-title[data-path*="宙間"],
+.nav-folder-title[data-path*="旧軍事部門"] {
+    color: color-mix(in srgb, var(--folder-color-gunji) 75%, white) !important;
+    font-size: 12.5px;
+}
+
+/* 記録系 */
+.nav-folder-title[data-path*="記録"] {
+    color: var(--folder-color-kiroku) !important;
+}
+
+.nav-folder-title[data-path*="事件等"],
+.nav-folder-title[data-path*="企業等"] {
+    color: color-mix(in srgb, var(--folder-color-kiroku) 80%, white) !important;
+    font-size: 12.5px;
+}
+
+/* テンプレート（末尾一致で子フォルダに波及しない） */
+.nav-folder-title[data-path$="テンプレート"],
+.nav-folder-title[data-path$="国家テンプレート"],
+.nav-folder-title[data-path$="template"] {
+    color: var(--folder-color-template) !important;
+    font-style: italic;
+}
+
+/* archive */
+.nav-folder-title[data-path*="archive"] {
+    color: var(--folder-color-archive) !important;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+/* ──────────────────────────────────────
+   4. ファイル名もフォルダに応じて色付け
+────────────────────────────────────── */
+/* ファイル名はフォルダより淡いグレー寄りに統一 */
+.nav-file-title[data-path*="国際"] {
+    color: color-mix(in srgb, var(--folder-color-kokusai) 25%, var(--text-normal));
+}
+
+.nav-file-title[data-path*="技術"] {
+    color: color-mix(in srgb, var(--folder-color-gijutsu) 25%, var(--text-normal));
+}
+
+.nav-file-title[data-path*="統治"],
+.nav-file-title[data-path*="政治"],
+.nav-file-title[data-path*="行政"],
+.nav-file-title[data-path*="法制度"],
+.nav-file-title[data-path*="経済"],
+.nav-file-title[data-path*="地理"],
+.nav-file-title[data-path*="公共"],
+.nav-file-title[data-path*="治安"],
+.nav-file-title[data-path*="インフラ"],
+.nav-file-title[data-path*="社会保障"] {
+    color: color-mix(in srgb, var(--folder-color-touchi) 25%, var(--text-normal));
+}
+
+.nav-file-title[data-path*="軍事"],
+.nav-file-title[data-path*="総合"],
+.nav-file-title[data-path*="陸上"],
+.nav-file-title[data-path*="宙間"] {
+    color: color-mix(in srgb, var(--folder-color-gunji) 25%, var(--text-normal));
+}
+
+.nav-file-title[data-path*="記録"],
+.nav-file-title[data-path*="事件等"],
+.nav-file-title[data-path*="企業等"] {
+    color: color-mix(in srgb, var(--folder-color-kiroku) 25%, var(--text-normal));
+}
+
+/* ──────────────────────────────────────
+   5. サイドバー区切り & インデントライン
+────────────────────────────────────── */
+.nav-folder-children {
+    border-left: 1px solid var(--background-modifier-border);
+    margin-left: 10px;
+    padding-left: 4px;
+}
+
+/* ──────────────────────────────────────
+   6. エディタ本文 — 読みやすさ設計
+────────────────────────────────────── */
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content {
+    font-family: var(--font-text-theme);
+    font-size: var(--font-text-size);
+    line-height: var(--line-height-normal);
+    color: var(--text-normal);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+    .markdown-preview-view p {
+        margin-bottom: 1.1em;
+    }
+
+    /* ──────────────────────────────────────
+   7. 太字 — つぶれない設計
+   通常400 → 太字700 で明確なコントラスト
+   + 色も本文より少し明るくして視認性UP
+────────────────────────────────────── */
+    .markdown-preview-view strong,
+    .markdown-preview-view b {
+        font-weight: 700 !important;
+        color: #eef2ff;
+        letter-spacing: -0.01em;
+    }
+
+/* ライブプレビュー内の太字 */
+.cm-strong {
+    font-weight: 700 !important;
+    color: #eef2ff !important;
+}
+
+/* イタリック */
+.markdown-preview-view em,
+.cm-em {
+    font-style: italic;
+    color: #b8c4e0;
+}
+
+    /* 太字+イタリック */
+    .markdown-preview-view strong em,
+    .markdown-preview-view em strong {
+        font-weight: 700 !important;
+        font-style: italic;
+        color: #c5d0ff;
+    }
+
+/* ──────────────────────────────────────
+   8. 見出し
+────────────────────────────────────── */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4 {
+    font-family: var(--font-text-theme);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-preview-view h1 {
+    font-size: 1.9em;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 0.3em;
+}
+
+.markdown-preview-view h2 {
+    font-size: 1.4em;
+    color: #dde3f0;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 10px;
+}
+
+.markdown-preview-view h3 {
+    font-size: 1.15em;
+    color: #b8c4e0;
+}
+
+.markdown-preview-view h4 {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ──────────────────────────────────────
+   9. インラインコード & コードブロック
+────────────────────────────────────── */
+.markdown-preview-view code {
+    font-family: var(--font-monospace-theme);
+    font-size: 0.88em;
+    background: rgba(91, 140, 255, 0.1);
+    color: #a5c8ff;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.markdown-preview-view pre {
+    background: #12151e;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+}
+
+    .markdown-preview-view pre code {
+        background: transparent;
+        color: #c9d4f0;
+        padding: 0;
+        font-size: 0.87em;
+    }
+
+/* ──────────────────────────────────────
+   10. 引用
+────────────────────────────────────── */
+.markdown-preview-view blockquote {
+    border-left: 3px solid rgba(91, 140, 255, 0.5);
+    background: rgba(91, 140, 255, 0.05);
+    margin: 1em 0;
+    padding: 10px 16px;
+    border-radius: 0 6px 6px 0;
+    color: var(--text-muted);
+}
+
+/* ──────────────────────────────────────
+   11. リスト
+────────────────────────────────────── */
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+    padding-left: 1.4em;
+    margin-bottom: 0.8em;
+}
+
+.markdown-preview-view li {
+    margin-bottom: 0.3em;
+    line-height: 1.8;
+}
+
+.markdown-preview-view ul > li::marker {
+    color: var(--color-accent);
+    font-size: 0.8em;
+}
+
+/* ──────────────────────────────────────
+   12. テーブル
+────────────────────────────────────── */
+.markdown-preview-view table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.93em;
+    margin: 1.2em 0;
+}
+
+.markdown-preview-view th {
+    background: rgba(91, 140, 255, 0.12);
+    color: #c5d0ff;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+    text-align: left;
+}
+
+.markdown-preview-view td {
+    padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-normal);
+}
+
+.markdown-preview-view tr:nth-child(even) td {
+    background: rgba(255,255,255,0.02);
+}
+
+/* ──────────────────────────────────────
+   13. タグ
+────────────────────────────────────── */
+.tag {
+    background: rgba(91, 140, 255, 0.14);
+    color: var(--color-accent-hover);
+    border: 1px solid rgba(91, 140, 255, 0.25);
+    border-radius: 99px;
+    font-size: 0.8em;
+    padding: 1px 8px;
+    font-weight: 500;
+}
+
+/* ──────────────────────────────────────
+   14. 内部リンク
+────────────────────────────────────── */
+.internal-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(91, 140, 255, 0.3);
+    transition: color 0.15s, border-color 0.15s;
+}
+
+    .internal-link:hover {
+        color: var(--color-accent-hover);
+        border-bottom-color: var(--color-accent-hover);
+    }
+
+    .internal-link.is-unresolved {
+        color: var(--text-muted);
+        border-bottom-style: dashed;
+    }
+
+/* ──────────────────────────────────────
+   15. スクロールバー
+────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.1);
+    border-radius: 99px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255,255,255,0.2);
+    }

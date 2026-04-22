@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "status": "text",
+    "ステータス": "text",
+    "最終更新日時": "datetime",
+    "タグ": "multitext",
+    "装備タイプ": "text",
+    "分類": "text"
+  }
+}

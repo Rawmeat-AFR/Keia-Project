@@ -1,0 +1,11 @@
+{
+  "cssTheme": "Red Graphite",
+  "interfaceFontFamily": "IPAmj明朝,游明朝",
+  "textFontFamily": "IPAmj明朝,游明朝",
+  "monospaceFontFamily": "BIZ UDPゴシック",
+  "baseFontSize": 16,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "alzia-theme"
+  ]
+}
