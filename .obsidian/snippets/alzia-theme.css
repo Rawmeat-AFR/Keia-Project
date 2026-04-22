@@ -52,6 +52,7 @@
     --folder-color-template: #546e7a; /* テンプレート — グレーブルー */
     --folder-color-archive: #4a5168; /* archive — ダルグレー */
     --folder-color-madou: #65318e; /* 魔導(ルート) */
+
     /* フォント */
     --font-text-theme: "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
     --font-monospace-theme: "JetBrains Mono", "Fira Code", monospace;
@@ -111,7 +112,7 @@
 }
 
     .nav-folder-title[data-path*="技術"]::before {
-        content: "⚙️ ";
+        content: "🛠️ ";
         font-size: 11px;
     }
 
@@ -124,11 +125,16 @@
 }
 
 /* 魔導(ルート) */
-.nav-folder-title[data-path="魔道"],
-.nav-folder-title[data-path*="/魔道"] {
+.nav-folder-title[data-path="魔導"],
+.nav-folder-title[data-path*="/魔導"] {
     color: var(--folder-color-madou) !important;
     font-weight: 600;
     letter-spacing: 0.04em;
+}
+
+.nav-folder-title[data-path*="魔導"]::before {
+    content: "📚 ";
+    font-size: 11px;
 }
 
 /* 統治系 */
