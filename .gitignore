@@ -1,0 +1,7 @@
+.obsidian/
+.trash/
+.cache/
+node_modules/
+public/
+.tmp.driveupload/
+.tmp.drivedownload/

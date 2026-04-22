@@ -1,0 +1,16 @@
+filters:
+  and:
+    - file.folder.startsWith("国家/アルジア連邦帝國/統治")
+views:
+  - type: table
+    name: 表
+    order:
+      - file.name
+      - 作成日
+      - 分類
+      - 種別
+      - ステータス
+    columnSize:
+      note.作成日: 209
+      note.分野: 86
+      note.分類: 74
