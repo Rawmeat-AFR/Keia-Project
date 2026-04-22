@@ -13,11 +13,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "国家/アーレイル帝國/軍事ベース.base",
-                "viewName": "総合"
+                "file": "国家/アーレイル帝國/統治ベース.base",
+                "viewName": "表"
               },
               "icon": "lucide-table",
-              "title": "軍事ベース"
+              "title": "統治ベース"
             }
           }
         ]
@@ -202,12 +202,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "33c45f0a50cc75cd",
+  "active": "c0197ef8ffe8c6c3",
   "lastOpenFiles": [
+    "国家/アーレイル帝國/軍事ベース.base",
     "国家/アーレイル帝國/統治ベース.base",
     "無題のファイル 1.md",
     "無題のファイル.md",
-    "国家/アーレイル帝國/軍事ベース.base",
     "魔導/無題のファイル.md",
     "国家/アルジア連邦帝國/統治ベース.base",
     "国家/アルジア連邦帝國/軍事ベース.base",
