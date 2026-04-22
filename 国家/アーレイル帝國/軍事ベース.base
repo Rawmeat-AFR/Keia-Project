@@ -1,0 +1,37 @@
+filters:
+  and:
+    - file.folder.startsWith("国家/アルジア連邦帝國/軍事")
+views:
+  - type: table
+    name: 総合
+    filters:
+      and:
+        - file.folder.startsWith("国家/アルジア連邦帝國/軍事")
+    order:
+      - file.name
+      - 作成日
+      - 分類
+      - 種別
+    sort:
+      - property: 種別
+        direction: ASC
+  - type: table
+    name: 陸上
+    filters:
+      and:
+        - file.folder == "国家/アルジア連邦帝國/軍事/陸上"
+    order:
+      - file.name
+      - 作成日
+      - 分類
+      - 種別
+  - type: table
+    name: 宙間
+    filters:
+      and:
+        - file.folder == "国家/アルジア連邦帝國/軍事/宙間"
+    order:
+      - file.name
+      - 作成日
+      - 分類
+      - 種別

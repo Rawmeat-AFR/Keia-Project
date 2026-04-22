@@ -1,0 +1,16 @@
+views:
+  - type: table
+    name: 草案
+    filters:
+      and:
+        - ステータス == "草案"
+    order:
+      - file.name
+      - file.path
+      - 国家
+      - file.ctime
+    sort: []
+    columnSize:
+      file.path: 337
+  - type: table
+    name: 監査待ち
